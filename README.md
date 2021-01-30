@@ -1,6 +1,10 @@
 # DS122 - Projeto
 
-> Integrantes do grupo: Karine Antoniacomi dos Santos, Lucas de Barros Silva, Pietro Prá Giacomitti e Robson Mariano Euzébio de Oliveira
+**Integrantes do grupo:** 
+- _Karine Antoniacomi dos Santos_
+- _Lucas de Barros Silva_
+- _Pietro Prá Giacomitti_
+- _Robson Mariano Euzébio de Oliveira_
 
 Este é o repositório de que deverá armazenar o Projeto de DS122 do início ao final da disciplina.
 
