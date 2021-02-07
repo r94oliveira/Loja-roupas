@@ -5,6 +5,12 @@
 
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <link rel="stylesheet" type="text/css" href="css/header.css">
+    <link rel="stylesheet" type="text/css" href="css/footer.css">
+  <link rel="stylesheet" type="text/css" href="css/index.css">
+
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 
   <title>Loja</title>
 
@@ -13,69 +19,86 @@
 <body>
 
   <header>
+    
+    <div id="topo">
 
-    <div id="topo-logo">
-      <h1>Loja</h1>
+      <div id="topo-logo">
+        <h1>Loja Virtual</h1>
+      </div>
+
+      <div id="topo-login">
+         <button type="button" value="Entre ou Cadastre-se" id="login">Entre ou Cadastre-se</button>
+      </div>
+
     </div>
 
-    <div id="topo-menu">
+    <div id="menu">
 
       <ul>
         <li><a href="index.html">Home</a></li>
-        <li><a href="index.html">Sobre nós</a></li>
-        <li><a href="paginaProdutos.html">Produtos</a></li>
-        <li><a href="index.html">Contato</a></li>
+        <li><a href="index.html">Empresa</a></li>
+        <li><a href="paginaProdutos.html">Feminino</a></li>
+        <li><a href="paginaProdutos.html">Masculino</a></li>
+        <li><a href="paginaProdutos.html">Infantil</a></li>
+        <li><a href="paginaProdutos.html">Casa</a></li>        
+        <li><a href="index.html">Atendimento</a></li>
       </ul>
 
-    </div>
-
-    <div id="topo-login">
-      <form action="http://web1-app.tadsufpr.net.br/test/form" method="post">
-
-          <h3> Login </h3>
-
-          Usuário<br>
-          <input type="text" name="usuario"><br><br>
-
-          Senha<br>
-          <input type="text" name="senha"><br><br>
-
-          <input type="submit" value="Entrar">
-
-      </form>
     </div>
 
   </header>
 
   <main>
 
-    <div id="propaganda-loja">
+    <div id="propaganda-img">
 
-      <h3> Compre em nossa loja!</h3>
-
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/PwFW_WDpwrk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <img width="100%" id="propaganda-img-roupa" src="img/propaganda.png">
 
     </div>
 
-    <div id="promocao-produtos">
+    <div id="conteudos">
 
-      <h3>Produtos em promoção:</h3>
+      <div class="conteudo" id="conteudo-produto">
+        
+        <div class="caixa-conteudo">
+          <a href="index.html"><img src="img/produto1.jpg" alt="produto A">
+          <p>Blusa Jeans <span> R$89,90<span></p>
+          </a>
+        </div>
 
-      <div>
+        <div class="caixa-conteudo">
+          <a href="index.html"><img src="img/produto2.jpg" alt="produto B">
+          <p>Pijama Short <span> R$49,90<span></p>
+          </a>
+        </div>
+        
+        <div class="caixa-conteudo">
+          <a href="index.html"><img src="img/produto3.jpg" alt="produto C">
+          <p>Pijama Curto Preto <span> R$69,90<span></p>
+          </a>
+        </div>
 
-        <table border="1px">
+        <div class="caixa-conteudo">
+          <a href="index.html"><img src="img/produto4.jpg" alt="produto D">
+          <p>Pijama Longo Básico <span> R$59,90<span></p>
+          </a>
+        </div>
 
-          <tr>
-            <th><a href="index.html">Produto A</a></th>
-            <th><a href="index.html">Produto B</a></th>
-          </tr>
+      </div>
 
-          <tr>
-            <td><a href="index.html"><img width="300" src="https://decathlonpro.vteximg.com.br/arquivos/ids/2127579-1000-1000/camiseta-masculina-de-corrida-run-dry-ka1.jpg?v=636697702234370000" alt="produto A"></a></td>
-            <td><a href="index.html"><img width="300" src="https://www.punkstein.com/loja/31595-thickbox_default/camiseta-sem-estampa.jpg" alt="produto B"></a></td>
-          </tr>
+      <div class="conteudo" id="conteudo-outros">
+        
+        <div class="caixa-conteudo">
+        <a href="index.html"><img src="img/promocao1.jpg" alt="promoção 1"></a>
+        </div>
 
-        </table>
+        <div class="caixa-conteudo">
+        <a href="index.html"><img src="img/promocao2.jpg" alt="promoção 2"></a>
+        </div>
+
+        <div class="caixa-conteudo">
+        <a href="index.html"><img src="img/promocao3.jpg" alt="promoção 3"></a>
+        </div>
 
       </div>
 
@@ -85,12 +108,43 @@
 
   <footer>
 
-    <br>
-    <div>
-      © Copyright 2000-2021 Loja
-    </div>
+        <div id="container-footer">
 
-  </footer>
+            <div id="botoes-footer">
+
+                <a href="">
+                    <button>
+                    <i class="fab fa-facebook"></i>
+                    </button>
+                </a>
+
+                <a href="">
+                    <button>
+                <i class="fab fa-twitter"></i>
+                    </button>
+                </a>
+
+                <a href="">
+                    <button>
+                <i class="fab fa-instagram"></i>
+                    </button>
+                </a>
+
+                <a href="">
+                    <button>
+                <i class="fab fa-youtube"></i>
+                    </button>
+                </a>
+
+            </div>
+
+	 		<div id="endereco">
+	 			<p>
+	 			Rua XV de Novembro, 1299 | CEP 80.060-000 | Centro | Curitiba | PR | Brasil
+	 			</p>
+      </div>
+
+   </footer>
 
 </body>
 </html>
