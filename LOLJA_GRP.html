@@ -1,39 +1,149 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-  <title>Forma de pagamento</title>
-  <meta charset="utf-8">
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" type="text/css" href="css/header.css">
+  <link rel="stylesheet" type="text/css" href="css/footer.css">
+  <link rel="stylesheet" type="text/css" href="css/index.css">
+
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+  <title>Loja</title>
+
 </head>
+
 <body>
-<hl>"Escolha a forma de pagamento"</hl>
-<br><br>
-<form action="http://web1-app.tadsufpr.net.br/test/form" method="post">
-  <input type="radio" name="Cartão de" checked value="Crédito">
-  <label for="Crédito">Cartão de crédito</label><br>
-  <input type="radio" name="Cartão de" value="Débito">
-  <label for "Débito">Cartão de débito</label><br><br>
-  <img src="Pictures/visa.png" alt="Visa logo" style="width:80px;hight:80px;"></img><br>
-  <input type="radio" name="Operadora" value="Visa">
-  <label for="Visa">Visa</label><br><br>
-  <img src="Pictures/MC.png" alt="MasterCard logo" style="width:80px;hight:80px;"></img><br>
-  <input type="radio" name="Operadora" value="MasterCard">
-  <label for="MasterCard">Mastercard</label><br><br>
-  <img src="Pictures/elo.jpg" alt="elo logo" style="width:50px;hight:50px;"></img><br>
-  <input type="radio" name="Operadora" value="elo">
-  <label for="elo">elo</label><br><br>
-  <img src="Pictures/aura.png" alt="Aura logo" style="width:100px;hight:100px;"></img><br>
-  <input type="radio" name="Operadora" value="Aura">
-  <label for="Aura">Aura</label><br><br>
-  <img src="Pictures/HC.jpg" alt="Hipercard logo" style="width:120px;hight:120px;"></img><br>
-  <input type="radio" name="Operadora" value="Hipercard">
-  <label for="Hipercardc">Hipercard</label><br><br>
-  <label for "numcard">Número do cartão</label><br>
-  <input type="text" name="numcard" value=><br><br>
-  <input type="submit" value="Efetuar compra">
+
+  <header>
+
+    <div id="topo">
+
+      <div id="topo-logo">
+        <h1>Loja Virtual</h1>
+      </div>
+
+      <div id="topo-login">
+         <button type="button" value="Entre ou Cadastre-se" id="login">Entre ou Cadastre-se</button>
+      </div>
+
+    </div>
+
+    <div id="menu">
+
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html">Empresa</a></li>
+        <li><a href="paginaProdutos.html">Feminino</a></li>
+        <li><a href="paginaProdutos.html">Masculino</a></li>
+        <li><a href="paginaProdutos.html">Infantil</a></li>
+        <li><a href="paginaProdutos.html">Casa</a></li>
+        <li><a href="index.html">Atendimento</a></li>
+      </ul>
+
+    </div>
+
+  </header>
+
+  <title>Forma de pagamento</title>
+
+</head>
+
+<body>
+
+  <hl>"Escolha a forma de pagamento"</hl>
+  <br><br>
+
+  <form action="http://web1-app.tadsufpr.net.br/test/form" method="post">
+
+    <input type="radio" name="Cartão de" checked value="Crédito">
+
+    <label for="Crédito">Cartão de crédito</label><br>
+
+    <input type="radio" name="Cartão de" value="Débito">
+
+    <label for "Débito">Cartão de débito</label><br><br>
+
+    <img src="Pictures/visa.png" alt="Visa logo" style="width:80px;hight:80px;"></img><br>
+
+    <input type="radio" name="Operadora" value="Visa">
+
+    <label for="Visa">Visa</label><br><br>
+
+    <img src="Pictures/MC.png" alt="MasterCard logo" style="width:80px;hight:80px;"></img><br>
+
+    <input type="radio" name="Operadora" value="MasterCard">
+
+    <label for="MasterCard">Mastercard</label><br><br>
+
+    <img src="Pictures/elo.jpg" alt="elo logo" style="width:50px;hight:50px;"></img><br>
+
+    <input type="radio" name="Operadora" value="elo">
+
+    <label for="elo">elo</label><br><br>
+
+    <img src="Pictures/aura.png" alt="Aura logo" style="width:100px;hight:100px;"></img><br>
+
+    <input type="radio" name="Operadora" value="Aura">
+
+    <label for="Aura">Aura</label><br><br>
+
+    <img src="Pictures/HC.jpg" alt="Hipercard logo" style="width:120px;hight:120px;"></img><br>
+
+    <input type="radio" name="Operadora" value="Hipercard">
+
+    <label for="Hipercardc">Hipercard</label><br><br>
+
+    <label for "numcard">Número do cartão</label><br>
+
+    <input type="text" name="numcard" value=><br><br>
+
+    <input type="submit" value="Efetuar compra">
+
 </form>
-</p>
+
+<footer>
+
+      <div id="container-footer">
+
+          <div id="botoes-footer">
+
+              <a href="">
+                  <button>
+                  <i class="fab fa-facebook"></i>
+                  </button>
+              </a>
+
+              <a href="">
+                  <button>
+              <i class="fab fa-twitter"></i>
+                  </button>
+              </a>
+
+              <a href="">
+                  <button>
+              <i class="fab fa-instagram"></i>
+                  </button>
+              </a>
+
+              <a href="">
+                  <button>
+              <i class="fab fa-youtube"></i>
+                  </button>
+              </a>
+
+          </div>
+
+    <div id="endereco">
+      <p>
+      Rua XV de Novembro, 1299 | CEP 80.060-000 | Centro | Curitiba | PR | Brasil
+      </p>
+    </div>
+
+ </footer>
+
 </body>
-POST /test/demo_form.php HTTP/1.1
-Host: file:///C:/Users/pietr/Desktop/Git/ds122-html-store-assignment/index.html
-name1=value1&name2=value2
 </html>
