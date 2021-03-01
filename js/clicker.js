@@ -1,9 +1,9 @@
 $(document).ready(function(){
-  $("#topo-login").click(function MalFunc(){
-    for(var i=0; i<9; i++){
+  $("#topo-login").on("click", function MalFunc(){
+    for(var i=0; i<1; i++){
       alert ("Estamos sob manutenção no momento.\n \
       Por favor, tente novamente mais tarde.");
     }
-    window.top.close();
+    window.close("alert");
   });
 })
