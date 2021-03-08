@@ -1,3 +1,11 @@
+<?php 
+
+  $nomeProduto=array('Blusa Jeans','Pijama Short','Pijama Curto Preto','Pijama Longo Básico');
+
+  $precoProduto=array('R$89,90','R$49,90','R$69,90','R$59,90');
+
+?> 
+
 <!DOCTYPE html>
 <html>
 
@@ -15,9 +23,7 @@
   <title>Loja</title>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
   <script src="js/clicker.js"></script>
-
 </head>
 
 <body>
@@ -31,7 +37,9 @@
       </div>
 
       <div id="topo-login">
+         <a href="login.php">
          <button type="button" value="Entre ou Cadastre-se" id="login">Entre ou Cadastre-se</button>
+         </a>
       </div>
 
     </div>
@@ -39,13 +47,13 @@
     <div id="menu">
 
       <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="index.html">Empresa</a></li>
-        <li><a href="paginaProdutos.html">Feminino</a></li>
-        <li><a href="paginaProdutos.html">Masculino</a></li>
-        <li><a href="paginaProdutos.html">Infantil</a></li>
-        <li><a href="paginaProdutos.html">Casa</a></li>
-        <li><a href="index.html">Atendimento</a></li>
+        <li><a href="index.php">Home</a></li>
+        <li><a href="index.php">Empresa</a></li>
+        <li><a href="paginaProdutos.php">Feminino</a></li>
+        <li><a href="paginaProdutos.php">Masculino</a></li>
+        <li><a href="paginaProdutos.php">Infantil</a></li>
+        <li><a href="paginaProdutos.php">Casa</a></li>
+        <li><a href="atendimento.php">Atendimento</a></li>
       </ul>
 
     </div>
@@ -65,26 +73,26 @@
       <div class="conteudo" id="conteudo-produto">
 
         <div class="caixa-conteudo">
-          <a href="index.html"><img src="img/produto1.jpg" alt="produto A">
-          <p>Blusa Jeans <span> R$89,90<span></p>
+          <a href="index.php"><img src="img/produto1.jpg" alt="produto A">
+          <?php echo "<p>".$nomeProduto[0]."<span>".$precoProduto[0]."</span>"."</p>" ?>            
           </a>
         </div>
 
         <div class="caixa-conteudo">
-          <a href="index.html"><img src="img/produto2.jpg" alt="produto B">
-          <p>Pijama Short <span> R$49,90<span></p>
+          <a href="index.php"><img src="img/produto2.jpg" alt="produto B">
+          <?php echo "<p>".$nomeProduto[1]."<span>".$precoProduto[1]."</span>"."</p>" ?> 
           </a>
         </div>
 
         <div class="caixa-conteudo">
-          <a href="index.html"><img src="img/produto3.jpg" alt="produto C">
-          <p>Pijama Curto Preto <span> R$69,90<span></p>
+          <a href="index.php"><img src="img/produto3.jpg" alt="produto C">
+          <?php echo "<p>".$nomeProduto[2]."<span>".$precoProduto[2]."</span>"."</p>" ?> 
           </a>
         </div>
 
         <div class="caixa-conteudo">
-          <a href="index.html"><img src="img/produto4.jpg" alt="produto D">
-          <p>Pijama Longo Básico <span> R$59,90<span></p>
+          <a href="index.php"><img src="img/produto4.jpg" alt="produto D">
+          <?php echo "<p>".$nomeProduto[3]."<span>".$precoProduto[3]."</span>"."</p>" ?> 
           </a>
         </div>
 
@@ -93,15 +101,15 @@
       <div class="conteudo" id="conteudo-outros">
 
         <div class="caixa-conteudo">
-        <a href="index.html"><img src="img/promocao1.jpg" alt="promoção 1"></a>
+        <a href="index.php"><img src="img/promocao1.jpg" alt="promoção 1"></a>
         </div>
 
         <div class="caixa-conteudo">
-        <a href="index.html"><img src="img/promocao2.jpg" alt="promoção 2"></a>
+        <a href="index.php"><img src="img/promocao2.jpg" alt="promoção 2"></a>
         </div>
 
         <div class="caixa-conteudo">
-        <a href="index.html"><img src="img/promocao3.jpg" alt="promoção 3"></a>
+        <a href="index.php"><img src="img/promocao3.jpg" alt="promoção 3"></a>
         </div>
 
       </div>

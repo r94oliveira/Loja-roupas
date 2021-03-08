@@ -13,7 +13,9 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 
   <title>Loja</title>
-
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="js/clicker.js"></script>
 </head>
 
 <body>
@@ -27,7 +29,9 @@
       </div>
 
       <div id="topo-login">
+         <a href="login.php">
          <button type="button" value="Entre ou Cadastre-se" id="login">Entre ou Cadastre-se</button>
+         </a>
       </div>
 
     </div>
@@ -35,13 +39,13 @@
     <div id="menu">
 
       <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="index.html">Empresa</a></li>
-        <li><a href="paginaProdutos.html">Feminino</a></li>
-        <li><a href="paginaProdutos.html">Masculino</a></li>
-        <li><a href="paginaProdutos.html">Infantil</a></li>
-        <li><a href="paginaProdutos.html">Casa</a></li>
-        <li><a href="index.html">Atendimento</a></li>
+        <li><a href="index.php">Home</a></li>
+        <li><a href="index.php">Empresa</a></li>
+        <li><a href="paginaProdutos.php">Feminino</a></li>
+        <li><a href="paginaProdutos.php">Masculino</a></li>
+        <li><a href="paginaProdutos.php">Infantil</a></li>
+        <li><a href="paginaProdutos.php">Casa</a></li>
+        <li><a href="atendimento.php">Atendimento</a></li>
       </ul>
 
     </div>
@@ -52,13 +56,13 @@
     <h1>Categoria de Produtos</h1>
     <ul>
       <br>
-      <li><a href="paginaProdutos.html">Roupas Masculinas</a></li><br>
-      <li><a href="tabelaRoupasF.html">Roupas Femininas</a></li><br>
-      <li><a href="paginaProdutos.html">Casa, Mesa e Banho</a></li><br>
-      <li><a href="paginaProdutos.html">Roupas Infantis</a></li><br>
-      <li><a href="paginaProdutos.html">Sapatos Masculinos</a></li><br>
-      <li><a href="paginaProdutos.html">Sapatos Femininos</a></li><br>
-      <li><a href="paginaProdutos.html">Sapatos Infantis</a></li><br><br><br><br>
+      <li><a href="paginaProdutos.php">Roupas Masculinas</a></li><br>
+      <li><a href="tabelaRoupasF.php">Roupas Femininas</a></li><br>
+      <li><a href="paginaProdutos.php">Casa, Mesa e Banho</a></li><br>
+      <li><a href="paginaProdutos.php">Roupas Infantis</a></li><br>
+      <li><a href="paginaProdutos.php">Sapatos Masculinos</a></li><br>
+      <li><a href="paginaProdutos.php">Sapatos Femininos</a></li><br>
+      <li><a href="paginaProdutos.php">Sapatos Infantis</a></li><br><br><br><br>
     </ul>
   </div>
 

@@ -14,6 +14,8 @@
 
   <title>Loja</title>
 
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="js/clicker.js"></script>
 </head>
 
 <body>
@@ -27,7 +29,9 @@
       </div>
 
       <div id="topo-login">
+         <a href="login.php">
          <button type="button" value="Entre ou Cadastre-se" id="login">Entre ou Cadastre-se</button>
+         </a>
       </div>
 
     </div>
@@ -35,13 +39,13 @@
     <div id="menu">
 
       <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="index.html">Empresa</a></li>
-        <li><a href="paginaProdutos.html">Feminino</a></li>
-        <li><a href="paginaProdutos.html">Masculino</a></li>
-        <li><a href="paginaProdutos.html">Infantil</a></li>
-        <li><a href="paginaProdutos.html">Casa</a></li>
-        <li><a href="index.html">Atendimento</a></li>
+        <li><a href="index.php">Home</a></li>
+        <li><a href="index.php">Empresa</a></li>
+        <li><a href="paginaProdutos.php">Feminino</a></li>
+        <li><a href="paginaProdutos.php">Masculino</a></li>
+        <li><a href="paginaProdutos.php">Infantil</a></li>
+        <li><a href="paginaProdutos.php">Casa</a></li>
+        <li><a href="atendimento.php">Atendimento</a></li>
       </ul>
 
     </div>
@@ -61,13 +65,13 @@
       <div class="conteudo" id="conteudo-produto">
 
         <div class="caixa-conteudo">
-          <a href="LOLJA_GRP.html"><img src="img/produto5.jpg" alt="Calça Jeans salmão com bolsos">
+          <a href="LOLJA_GRP.php"><img src="img/produto5.jpg" alt="Calça Jeans salmão com bolsos">
           <p>Calça Jeans Salmão<span> 129,90<span></p>
           </a>
         </div>
 
         <div class="caixa-conteudo">
-          <a href="index.html"><img src="img/produto6.jpg" alt="Blusa Cropped Rosa">
+          <a href="index.php"><img src="img/produto6.jpg" alt="Blusa Cropped Rosa">
           <p>Calça Jeans Salmão<span> 49,90<span></p>
           </a>
         </div>
