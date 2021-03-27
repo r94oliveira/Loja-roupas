@@ -7,7 +7,7 @@
 }
 
 ul {
-	list-style: none;
+  	list-style: none;
 }
 
 a {
@@ -17,14 +17,14 @@ a {
 /* --------------------------- MAIN --------------------------- */
 
 main {
-	width: 100%;
+	  width: 100%;
     margin: 0 auto;
 }
 
 /* ----- Imagem de propaganda ----- */
 
 main div img {
-	width: 100%; 
+  	width: 100%; 
 }
 
 /* ----- Conteudos ----- */

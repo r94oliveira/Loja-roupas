@@ -1,6 +1,8 @@
 <?php
 require 'lib/sanitize.php';
 require 'db_credentials.php';
+require_once ('./component.php');
+require_once ('./criaDB_roupas.php');
 
 $conn = mysqli_connect($servername,$username,$password,$dbname);
 if (!$conn) {

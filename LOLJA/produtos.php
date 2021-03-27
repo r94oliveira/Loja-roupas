@@ -28,6 +28,7 @@ if(isset($_POST['Add'])){
   }
 }
 
+
 $conn = mysqli_connect($servername,$username,$password,$dbname);
   if (!$conn){
     die("Problemas ao conectar com o BD!<br>".
@@ -61,32 +62,16 @@ mysqli_close($conn);
     <div id="propaganda-img">
       <img width="100%" id="propaganda-img-roupa" src="img/propaganda.png">
     </div>
-      <div class="conteudo" id="conteudo-produto">
+    <div class="container">
+      <div class="row text-center py-5">
 
-          <?php if(mysqli_num_rows($produtos_set) > 0): ?>
-            <?php while($produtos = mysqli_fetch_assoc($produtos_set)): ?>
-      
-        <div class="caixa-conteudo">
-          <a href="produtos.php">
+      <?php
+       $result = $database->getData();
+       while($row = mysqli_fetch_assoc($result)){
+         component($row['imagem'], $row['produto'], $row['preco'], $row['id']);
+       }
+      ?>
 
-            <img src="<?php echo $produtos["imagem"]; ?>" alt="<?php echo $produtos["produto"]; ?>">
-          </a>
-        </div>
-          <?php endwhile; ?>
-          <?php endif; ?>
-
-      </div>
-      <div class="conteudo" id="conteudo-outros">
-        <div class="caixa-conteudo">
-          <a href="masculino.php"><img src="img/promocao1.jpg" alt="promoção 1"></a>
-        </div>
-        <div class="caixa-conteudo">
-          <a href="masculino.php"><img src="img/promocao2.jpg" alt="promoção 2"></a>
-        </div>
-        <div class="caixa-conteudo">
-          <a href="feminino.php"><img src="img/promocao3.jpg" alt="promoção 3"></a>
-        </div>
-      </div>
   </div>
 </div>
 </main>

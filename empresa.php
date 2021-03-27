@@ -14,7 +14,7 @@
       <img width="100%" id="propaganda-img-roupa" src="img/propaganda.png">
     </div>
 
-  	    <div id="conteudos">
+  	 <div id="conteudos">
       <div class="conteudo">
 
   		<div>

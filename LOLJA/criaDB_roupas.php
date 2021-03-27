@@ -44,11 +44,51 @@ class criaDB{
                mas lembre de comentar essa seção novamente para não criar
                novos itens sempre que carregar a página. --- */
 
-        // $sql = "INSERT INTO $tablename (produto,preco,categoria,imagem,promocao) VALUES
-        //         ('Blusa Jeans', '89.90','Feminino','img/produto1.jpg','false'),
-        //         ('Pijama Short', '49,90', 'Feminino', 'img/produto2.jpg', 'false'),
-        //         ('Pijama Longo (Preto)', '69,90', 'Masculino', 'img/produto3.jpg', 'false'),
-        //         ('Pijama Longo (Básico)', '59,90', 'Masculino', 'img/produto4.jpg', 'false')";
+   /* $sql = "INSERT INTO 
+         $table (produto,preco,categoria,imagem,promocao)
+         VALUES 
+
+         ('Blusa Jeans', '89.90','feminino','img/produto1.jpg','1'),
+
+         ('Pijama Short', '49.90','feminino','img/produto2.jpg','1'),
+
+         ('Pijama Curto Preto', '69.90','masculino','img/produto3.jpg','1'),
+
+         ('Pijama Longo Básico', '59.90','masculino','img/produto4.jpg','1'), 
+
+
+
+
+         ('Blusão Moletom Cropped', '99.90','feminino','img/produto5.jpg','0'),
+
+         ('Camisa manga longa', '99.90','masculino','img/produto6.jpg','0'),
+
+         ('PARKA ZÍPER COM CAPUZ', '159.90','feminino','img/produto7.jpg','0'),
+
+         ('Camiseta Zíper Lateral', '49.90','masculino','img/produto8.jpg','0'), 
+
+
+
+
+         ('Blusa ALÇAS RECORTES', '99.90','feminino','img/produto9.jpg','0'),
+
+         ('Calça Jeans Slim', '99.90','masculino','img/produto10.jpg','0'),
+
+         ('Calça jogger moletom', '119.90','feminino','img/produto11.jpg','0'),
+
+         ('camisa Casual Liocel', '119.90','masculino','img/produto12.jpg','0'),
+
+
+         ('Camisa Casual Listrada', '119.90','masculino','img/produto13.jpg','0'),
+
+         ('Camiseta Hello Kitt', '69.90','feminino','img/produto14.jpg','0'),
+
+         ('Camiseta Malha Estampa', '59.90','masculino','img/produto15.jpg','0'),
+
+         ('Vestido Curto Floral', '139.90','feminino','img/produto16.jpg','0') 
+
+
+         "; */
 
         if(!mysqli_query($this->con,$sql)){
           die("Problemas para inserir novo produto no BD!<br>".
