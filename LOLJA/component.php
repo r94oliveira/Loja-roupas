@@ -21,18 +21,18 @@ function component($img_address,$prodnome,$prodprice,$prodid){
 
 function cartElement($img_address,$prodnome,$prodprice,$prodcat,$prodid){
   $element = "
-  <form class=\"cart-itens\" action=\"cart.php?=remove&id=$prodid\" method=\"POST\">
+  <form class=\"cart-itens\" action=\"cart.php?action=remove&id=$prodid\" method=\"POST\">
     <div class=\"border rounded\">
       <div class=\"row bg-white\">
         <div class=\"col-md-5 pl-0\">
-          <img src=\"$img_address\" alt=\"imagem 1\" class=\"img-fluid\">
+          <img src=\"$img_address\" alt=\"imagem do produto\" class=\"img-fluid\">
         </div>
         <div class=\"col-md-6\">
           <h5 class=\"pt-5\">$prodnome</h5>
           <small class=\"text-secondary\">$prodcat</small>
-          <h5 class=\"pt-2\">$prodprice</h5>
+          <h5 class=\"pt-2\">R$ $prodprice</h5>
           <button type=\"submit\" class=\"btn btn-warning\" name=\"Reservar\">Reservar produto</button>
-          <button type=\"submit\" class=\"btn btn-danger mx-2\" name=\"Remover\">Remover</button>
+          <button type=\"submit\" class=\"btn btn-danger mx-2\" name=\"remove\">Remover</button>
         </div>
 
         <!-- Quantidade do produto -->
@@ -52,7 +52,6 @@ function cartElement($img_address,$prodnome,$prodprice,$prodcat,$prodid){
       </div>
     </div>
   </form>";
-
   echo $element;
 }
 

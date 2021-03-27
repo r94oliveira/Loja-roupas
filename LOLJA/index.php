@@ -20,7 +20,7 @@ if(isset($_POST['Add'])){
       $count = count($_SESSION['cart']);
       $item_array = array('prodid' => $_POST['prodid']);
       $_SESSION['cart'][$count] = $item_array;
-      print_r($_SESSION['cart']);
+      // print_r($_SESSION['cart']);
     }
   }else{
     $item_array = array('prodid' => $_POST['prodid']);
@@ -71,7 +71,6 @@ mysqli_close($conn);
          component($row['imagem'], $row['produto'], $row['preco'], $row['id']);
        }
       ?>
-
       <div class="conteudo" id="conteudo-outros">
         <div class="caixa-conteudo">
           <a href="index.php"><img src="img/promocao1.jpg" alt="promoção 1"></a>

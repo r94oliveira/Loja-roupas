@@ -12,7 +12,7 @@ $db = new criaDB($dbname,$table,$servername,$username,$password);
 if(isset($_POST['remove'])){
   if($_GET['action'] == 'remove'){
     foreach ($_SESSION['cart'] as $key => $value) {
-      if($value("$prod_id") == $_GET['id']){
+      if($value["prodid"] == $_GET['id']){
         unset($_SESSION['cart'][$key]);
         echo "<script>alert('Produto removido!')</script>";
         echo "<script>window.location = 'cart.php'</script>";
@@ -50,7 +50,7 @@ if(isset($_POST['remove'])){
               $total = 0;
 
               if(isset($_SESSION['cart'])){
-                $prodid = array_column($_SESSION['cart'], 'id');
+                $prodid = array_column($_SESSION['cart'], 'prodid');
                 $result = $db->getData();
                 while($row = mysqli_fetch_assoc($result)){
                   foreach ($prodid as $id) {
