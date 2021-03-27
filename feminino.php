@@ -8,7 +8,7 @@ if (!$conn) {
        mysqli_connect_error());
 }
 
-$sql = "SELECT produto, preco, imagem FROM $table WHERE promocao='1'";
+$sql = "SELECT produto, preco, imagem, descricao FROM $table WHERE categoria='feminino'";
 if(!($produtos_set = mysqli_query($conn,$sql))){
   die("Problemas para carregar os produtos do BD!<br>".
        mysqli_error($conn));
@@ -39,28 +39,17 @@ mysqli_close($conn);
             <?php while($produtos = mysqli_fetch_assoc($produtos_set)): ?>
       
         <div class="caixa-conteudo">
-          <a href="feminino.php">
-
-            <img src="<?php echo $produtos["imagem"]; ?>" alt="<?php echo $produtos["produto"]; ?>">
+          <a href=""><img src="<?php echo $produtos["imagem"]; ?>" alt="<?php echo $produtos["produto"]; ?>">
           <?php echo "<p>".$produtos["produto"]."<span> R$ ".$produtos["preco"]."</span>"."</p>" ?>
           </a>
+
         </div>
+
           <?php endwhile; ?>
           <?php endif; ?>
 
       </div>
 
-      <div class="conteudo" id="conteudo-outros">
-        <div class="caixa-conteudo">
-        <a href="masculino.php"><img src="img/promocao1.jpg" alt="promoção 1"></a>
-        </div>
-        <div class="caixa-conteudo">
-        <a href="masculino.php"><img src="img/promocao2.jpg" alt="promoção 2"></a>
-        </div>
-        <div class="caixa-conteudo">
-        <a href="feminino.php"><img src="img/promocao3.jpg" alt="promoção 3"></a>
-        </div>
-      </div>
     </div>
   </main>
   <?php include "footer.php"; ?>

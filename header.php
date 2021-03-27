@@ -12,11 +12,9 @@
   <div id="menu">
     <ul>
       <li><a href="index.php">Home</a></li>
-      <li><a href="index.php">Empresa</a></li>
-      <li><a href="paginaProdutos.php">Feminino</a></li>
-      <li><a href="paginaProdutos.php">Masculino</a></li>
-      <li><a href="paginaProdutos.php">Infantil</a></li>
-      <li><a href="paginaProdutos.php">Casa</a></li>
+      <li><a href="empresa.php">Empresa</a></li>
+      <li><a href="feminino.php">Feminino</a></li>
+      <li><a href="masculino.php">Masculino</a></li>
       <li><a href="atendimento.php">Atendimento</a></li>
     </ul>
   </div>
