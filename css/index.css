@@ -71,3 +71,35 @@ main #conteudo-produto p span {
     margin-left: 5px;
     font-weight: bold;   
 }
+
+main .conteudo h2 {
+   margin: 10px;
+  padding: 10px 50px;
+   font-size: 30px; 
+       text-align: center;
+}
+
+main .conteudo #empresa-historia {
+  text-transform: capitalize;
+  padding: 10px 50px;
+    text-align: justify;
+
+}
+
+main .conteudo #empresa-imagem img {
+  padding: 10px 50px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+      width: auto;
+    height: auto;
+               text-align: center;
+}
+
+main .conteudo #contato {
+       margin: 10px;
+  padding: 10px 50px;
+   font-size: 20px; 
+       text-align: center;
+}
