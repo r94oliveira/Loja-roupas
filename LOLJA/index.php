@@ -5,7 +5,7 @@ session_start();
 require 'sanitize.php';
 require 'db_credentials.php';
 require_once ('./component.php');
-require_once ('./criaDB.php');
+require_once ('./criaDB_roupas.php');
 
 $database = new criaDB($dbname,$table,$servername,$username,$password);
 
