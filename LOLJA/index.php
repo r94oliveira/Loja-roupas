@@ -1,6 +1,7 @@
 <?php
 
 require 'iniciaSessao.php';
+
 require 'sanitize.php';
 require 'db_credentials.php';
 require_once ('./component.php');
@@ -60,21 +61,18 @@ mysqli_close($conn);
     <div id="propaganda-img">
       <img width="100%" id="propaganda-img-roupa" src="img/propaganda.png">
     </div>
-      <div class="conteudo" id="conteudo-produto">
+      <div class="container">
+        <div class="row text-center py-5">
 
-          <?php if(mysqli_num_rows($produtos_set) > 0): ?>
-            <?php while($produtos = mysqli_fetch_assoc($produtos_set)): ?>
+        <?php
+         $result = $database->getData();
+         while($row = mysqli_fetch_assoc($result)){
+           component($row['imagem'], $row['produto'], $row['preco'], $row['id']);
+         }
+        ?>
 
-        <div class="caixa-conteudo">
-          <a href="produtos.php">
-
-            <img src="<?php echo $produtos["imagem"]; ?>" alt="<?php echo $produtos["produto"]; ?>">
-          </a>
-        </div>
-          <?php endwhile; ?>
-          <?php endif; ?>
-
-      </div>
+    </div>
+  </div>
       <div class="conteudo" id="conteudo-outros">
         <div class="caixa-conteudo">
           <a href="masculino.php"><img src="img/promocao1.jpg" alt="promoção 1"></a>
