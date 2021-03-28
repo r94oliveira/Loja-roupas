@@ -1,10 +1,4 @@
 
-* {
-    margin: 0;
-    padding: 0;
-    font-size: 15px;
-    font-family: "Roboto","Arial",sans-serif;
-}
 
 ul {
 	list-style: none;
@@ -20,18 +14,18 @@ html, body {
 }
 
 body {
-	display: flex;
+
 	align-items: center;
 	justify-content: center;	
 }
 
 #container {
-	border: black;
-	background-color: black;
+  display: grid;
+  grid-template-columns: 50% 50%;
 }
 
 #login {
-	color: white;
+
 	padding: 30px;
 	text-align: center;
 }
@@ -40,25 +34,28 @@ body {
 	margin-bottom: 10px;
 }
 
-.button {
-	margin-top: 10px;
-	border: 1px solid white;
-	color: white;
-	background-color:black;
-	width: 70%;
-	padding: 5px;
+
+
+.form-control {
+	width: 100%;
+
+}
+
+.btn {
+	width: 25%;
 }
 
 
-#voltar {
-margin-top:20px;
+#login li {
+margin-top:30px;
+margin-left:-30px;
 }
 
-#voltar a {
-color:white;
+#login-imagem img {
+    padding: 10px 50px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    text-align: center;
 }
-
-#voltar a:visited {
-color: white;
-}
-

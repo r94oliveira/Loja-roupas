@@ -65,10 +65,11 @@ if (!$login && $_SERVER["REQUEST_METHOD"] == "POST") {
   <title>Login</title>
 </head>
 <body>
+
   <?php include "header.php"?>
   <div id="container">
     <div id="login">
-      <h1>Login</h1>
+      <h1>Login:</h1><br>
 
       <?php if ($login): ?>
         <h3>Você já está logado!</h3>
@@ -82,19 +83,28 @@ if (!$login && $_SERVER["REQUEST_METHOD"] == "POST") {
       <?php endif; ?>
 
       <form action="login.php" method="post">
-        <label for="email">Email: </label>
-        <input type="text" name="email" value="<?php echo $email; ?>" required><br>
 
-        <label for="password">Senha: </label>
-        <input type="password" name="password" value="" required><br>
+      <div class="form-group">
+        <label for="email">Email: </label><br>
+        <input type="text" name="email"  class="form-control" value="<?php echo $email; ?>" required><br>
+      </div>
 
-        <input type="submit" name="submit" value="Entrar">
+      <div class="form-group">
+        <label for="password">Senha: </label><br>
+        <input type="password" name="password"  class="form-control" value="" required><br>
+      </div>
+
+        <input type="submit" class="btn btn-dark" name="submit" value="Entrar">
+
       </form>
 
       <ul>
         <li><a href="indexLogin.php">Voltar</a></li>
       </ul>
     </div>
+      <div id="login-imagem">
+        <img src="img/login.png">
+      </div>
   </div>
 
 </p>
