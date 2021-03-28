@@ -108,7 +108,7 @@ if (!$login && $_SERVER["REQUEST_METHOD"] == "POST") {
         <img src="img/login.png">
       </div>
   </div>
-
+<br><br>
 </p>
   <?php include "footer.php"; ?>
 </body>

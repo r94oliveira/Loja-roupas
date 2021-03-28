@@ -5,6 +5,14 @@
 - _Pietro Prá Giacomitti_
 - _Robson Mariano Euzébio de Oliveira_
 
+*************************
+
+**Link para o video explicando o trabalho final:**
+
+https://youtu.be/uNUzFm_qoAw
+
+*************************
+
 Este é o repositório de que deverá armazenar o Projeto de DS122 do início ao final da disciplina.
 
 Trabalho a ser realizado em grupos de 3 a 5 estudantes.
