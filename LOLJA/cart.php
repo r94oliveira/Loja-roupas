@@ -56,7 +56,7 @@ if(isset($_POST['remove'])){
                   foreach ($prodid as $id) {
                     if($row['id'] == $id){
                      cartElement($row['imagem'], $row['produto'], $row['preco'], $row['categoria'], $row['id']);
-                     $total += (int)$row['preco'];
+                     $total += (float)$row['preco'];
                     }
                   }
                 }
@@ -85,10 +85,10 @@ if(isset($_POST['remove'])){
                  <h6>Total a pagar:</h6>
               </div>
               <div class="col-md-6">
-                <h6><?php echo "R$ $total"?></h6>
+                <h6><?php echo "R$" . number_format((float)"$total",2,".","");?></h6>
                 <h6 class="text-success">Grátis</h6>
                 <hr>
-                <h6><?php echo "R$ $total"?></h6>
+                <h6><?php echo "R$" . number_format((float)"$total",2,".","");?></h6>
               </div>
             </div>
           </div>
