@@ -11,5 +11,5 @@ $username = "web1";
 $password = "tads";
 $dbname = "ds122_2021_especial_2";
 $table = "grr20204458_produtos";
-
+$table_users = "grr20204458_usuarios";
 ?>
