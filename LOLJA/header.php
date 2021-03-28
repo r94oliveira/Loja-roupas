@@ -1,12 +1,17 @@
+
 <header>
   <div id="topo">
     <div id="topo-logo">
       <h1>Loja Virtual</h1>
     </div>
     <div id="topo-login">
-       <a href="login.php">
-       <button type="button" value="Entre ou Cadastre-se" id="login">Entre ou Cadastre-se</button>
-       </a>
+        <a href="indexLogin.php">
+          <?php if(isset($_SESSION["user_name"])){
+            echo "<button type='button' value='Entre ou Cadastre-se' id='login'>" . $_SESSION["user_name"] . "</button>";
+          }else{
+            echo "<button type='button' value='Entre ou Cadastre-se' id='login'>Entre ou Cadastre-se</button>";
+          }?>
+        </a>
     </div>
   </div>
   <div id="menu">

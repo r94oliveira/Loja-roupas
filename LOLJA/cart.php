@@ -1,7 +1,6 @@
 <?php
 
-session_start();
-
+require 'iniciaSessao.php';
 require 'sanitize.php';
 require 'db_credentials.php';
 require_once ("criaDB_roupas.php");

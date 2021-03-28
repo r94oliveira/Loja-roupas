@@ -59,9 +59,9 @@ mysqli_close($conn);
 <body class="bg-light">
   <main>
     <?php require_once ("paghead.php"); ?>
-    <div id="propaganda-img">
+    <!-- <div id="propaganda-img">
       <img width="100%" id="propaganda-img-roupa" src="img/propaganda.png">
-    </div>
+    </div> -->
     <div class="container">
       <div class="row text-center py-5">
 

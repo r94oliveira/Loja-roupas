@@ -59,9 +59,9 @@ mysqli_close($conn);
 <body class="bg-light">
   <main>
     <?php require_once ("paghead.php"); ?>
-    <div id="propaganda-img">
+    <!-- <div id="propaganda-img">
       <img width="100%" id="propaganda-img-roupa" src="img/propaganda.png">
-    </div>
+    </div> -->
 
       <div id="conteudos">
       <div class="conteudo" id="empresa">
@@ -88,7 +88,7 @@ mysqli_close($conn);
       <br>
       De segunda a sábado das 8h às 20:30h
       <br>
-      exceto domingos e feriados nacionais</span> 
+      exceto domingos e feriados nacionais</span>
 
 </div></div></div>
 

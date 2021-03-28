@@ -1,111 +1,103 @@
 <?php
-function verifica_campo($texto){
-  $texto = trim($texto);
-  $texto = stripslashes($texto);
-  $texto = htmlspecialchars($texto);
-  return $texto;
+require "db_functions.php";
+require "authenticate.php";
+
+$error = false;
+$password = $email = "";
+
+if (!$login && $_SERVER["REQUEST_METHOD"] == "POST") {
+  if (isset($_POST["email"]) && isset($_POST["password"])) {
+
+    $conn = connect_db();
+
+    $email = mysqli_real_escape_string($conn,$_POST["email"]);
+    $password = mysqli_real_escape_string($conn,$_POST["password"]);
+    $password = md5($password);
+
+    $sql = "SELECT id,name,email,password FROM $table_users
+            WHERE email = '$email';";
+
+    $result = mysqli_query($conn, $sql);
+    if($result){
+      if (mysqli_num_rows($result) > 0) {
+        $user = mysqli_fetch_assoc($result);
+
+        if ($user["password"] == $password) {
+
+          $_SESSION["user_id"] = $user["id"];
+          $_SESSION["user_name"] = $user["name"];
+          $_SESSION["user_email"] = $user["email"];
+
+          header("Location: " . dirname($_SERVER['SCRIPT_NAME']) . "/index.php");
+          exit();
+        }
+        else {
+          $error_msg = "Senha incorreta!";
+          $error = true;
+        }
+      }
+      else{
+        $error_msg = "Usuário não encontrado!";
+        $error = true;
+      }
+    }
+    else {
+      $error_msg = mysqli_error($conn);
+      $error = true;
+    }
+  }
+  else {
+    $error_msg = "Por favor, preencha todos os dados.";
+    $error = true;
+  }
 }
-
-$email = $senha = "";
-$erro = false;
-
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-
-//------------- EMAIL
-
-  if(empty($_POST["email"])){
-    $erro_email = "Email é obrigatório.";
-    $erro = true;
-  }
-
-  else if (!(filter_var(($_POST["email"]), FILTER_VALIDATE_EMAIL))){
-    $erro_email = "Email inválido.";
-    $erro = true;
-  }
-  else{
-    $email = verifica_campo($_POST["email"]);
-  }
-
-//------------- SENHA
-
-  if(empty($_POST["senha"])){
-    $erro_senha = "Senha é obrigatório.";
-    $erro = true;
-  }
-  else{
-    $senha = verifica_campo($_POST["senha"]);
-  }
-
-};
-
 ?>
-
-
 <!DOCTYPE html>
 <html>
-  <head>
-    <?php include "Head.php"; ?>
-    <title>Login</title>
-    <link rel="stylesheet" type="text/css" href="css/login.css">
-  </head>
+<head>
+  <?php include "Head.php"; ?>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="css/login.css">
+  <meta charset="utf-8">
+  <title>Login</title>
+</head>
 <body>
-
+  <?php include "header.php"?>
   <div id="container">
     <div id="login">
+      <h1>Login</h1>
 
-      <?php if ($_SERVER["REQUEST_METHOD"] == "POST"): ?>
-        <?php if (!$erro): ?>
-          <div style="color:red;">
-            
-            Ocorreu algum erro no servidor. Tente novamente mais tarde!
- 
-              <?php
-                $email = $senha = "";
-              ?>
-
-          </div>
-
-        <?php else: ?>
-          <div style="color:red;">
-    
-            Erros no formulário.
-            <br>
-
-          </div>
-        <?php endif; ?>
+      <?php if ($login): ?>
+        <h3>Você já está logado!</h3>
+      </body>
+      </html>
+      <?php exit(); ?>
       <?php endif; ?>
 
-      <form name="form_add" method="POST" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>"  id="entrar-form">
+      <?php if ($error): ?>
+        <h3 style="color:red;"><?php echo $error_msg; ?></h3>
+      <?php endif; ?>
 
-          <div>
-            <h4>E-mail</h4>
-            <input type="email" class="form-control" id="email" name="email" placeholder="Digite aqui o seu email" value="<?php echo $email; ?>">
-            <?php if (!empty($erro_email)){ ?>
-              <br><span style="color:red;" id="erro-email"><?php echo $erro_email ?></span>
-            <?php } ?>
-          </div>
+      <form action="login.php" method="post">
+        <label for="email">Email: </label>
+        <input type="text" name="email" value="<?php echo $email; ?>" required><br>
 
-        <br><br>
+        <label for="password">Senha: </label>
+        <input type="password" name="password" value="" required><br>
 
-          <div>
-            <h4>Senha</h4>
-            <input type="password" class="form-control" id="senha" name="senha" placeholder="Digite aqui a sua senha" value="<?php echo $senha; ?>">
-            <?php if (!empty($erro_senha)){ ?>
-              <br><span style="color:red;" id="erro-senha"><?php echo $erro_senha ?></span><br>
-            <?php } ?>
-          </div>
-
-        <div id="botao-login">
-          <div><input class="button" id="form-submit" type="submit" value="Entrar"></div>
-        </div>
-
+        <input type="submit" name="submit" value="Entrar">
       </form>
-      <div id="botao-cadastro"><a><input class="button" id="cadastro" type="submit" value="Cadastrar"></a></div>
-      <div id="voltar"><a href="index.php">Voltar</a></div>
+
+      <ul>
+        <li><a href="indexLogin.php">Voltar</a></li>
+      </ul>
     </div>
   </div>
 
-  <script src="js/login.js"></script>
-
+</p>
+  <?php include "footer.php"; ?>
 </body>
 </html>

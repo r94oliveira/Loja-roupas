@@ -1,7 +1,6 @@
 <?php
 
-session_start();
-
+require 'iniciaSessao.php';
 require 'sanitize.php';
 require 'db_credentials.php';
 require_once ('./component.php');
@@ -65,7 +64,7 @@ mysqli_close($conn);
 
           <?php if(mysqli_num_rows($produtos_set) > 0): ?>
             <?php while($produtos = mysqli_fetch_assoc($produtos_set)): ?>
-      
+
         <div class="caixa-conteudo">
           <a href="produtos.php">
 

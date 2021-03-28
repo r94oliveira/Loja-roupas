@@ -59,9 +59,9 @@ mysqli_close($conn);
 <body class="bg-light">
   <main>
     <?php require_once ("paghead.php"); ?>
-    <div id="propaganda-img">
+    <!-- <div id="propaganda-img">
       <img width="100%" id="propaganda-img-roupa" src="img/propaganda.png">
-    </div>
+    </div> -->
 
      <div id="conteudos">
       <div class="conteudo">
@@ -75,7 +75,7 @@ mysqli_close($conn);
       </div><BR>
 
       <p id="empresa-historia">
-        
+
 A Lojas S.A. teve seu início em 1922, com o começo das atividades fabris do então Grupo A. J., e desvinculou-se do grupo fundado pelo gaúcho Antônio Jacob somente em 1965, quando suas lojas começaram a tomar um formato mais próximo do atual.
 <br><br>
 Em 2017, a empresa criou a subsidiária incorporada Realize Soluções Financeiras, passando a oferecer serviços de crédito, seguros e assistências aos seus clientes.
@@ -88,7 +88,7 @@ Em 2017, a Lojas S.A. deu mais um passo importante ao inaugurar sua primeira ope
 </div>
 
 </div>
-    </div>    
+    </div>
 </main>
 
 <?php include "footer.php"; ?>
