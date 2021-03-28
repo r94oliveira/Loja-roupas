@@ -1,5 +1,6 @@
 <?php
 require "db_functions.php";
+require "authenticate.php";
 
 $error = false;
 $success = false;
@@ -44,12 +45,24 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <!DOCTYPE html>
 <html>
 <head>
+  <?php include "Head.php"; ?>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="css/login.css">
   <meta charset="utf-8">
-  <title>[WEB 1] Exemplo Sistema de Login - Registro</title>
+  <title>Registro - Login</title>
 </head>
 <body>
-<h1>Dados para registro de novo usuário</h1>
 
+    <?php include "header.php"?>
+
+  <div id="container">
+    <div id="login">
+
+<h1>Digite seus dados para registrar-se:</h1>
+<br>
 <?php if ($success): ?>
   <h3 style="color:lightgreen;">Usuário criado com sucesso!</h3>
   <p>
@@ -62,24 +75,43 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <?php endif; ?>
 
 <form action="register.php" method="post">
+
+<div class="form-group">
   <label for="name">Nome: </label>
-  <input type="text" name="name" value="<?php echo $name; ?>" required><br>
+  <input type="text" class="form-control" name="name" value="<?php echo $name; ?>" required><br>
+</div>
 
+<div class="form-group">
   <label for="email">Email: </label>
-  <input type="text" name="email" value="<?php echo $email; ?>" required><br>
+  <input type="text" class="form-control" name="email" value="<?php echo $email; ?>" required><br>
+</div>
 
+<div class="form-group">
   <label for="password">Senha: </label>
-  <input type="password" name="password" value="" required><br>
+  <input type="password" class="form-control" name="password" value="" required><br>
+</div>
 
+<div class="form-group">
   <label for="confirm_password">Confirmação da Senha: </label>
-  <input type="password" name="confirm_password" value="" required><br>
+  <input type="password" class="form-control" name="confirm_password" value="" required><br>
+</div>
 
-  <input type="submit" name="submit" value="Criar usuário">
+  <input type="submit"  class="btn btn-dark" name="submit" value="Criar usuário">
 </form>
 
 <ul>
   <li><a href="index.php">Voltar</a></li>
 </ul>
 </p>
+
+</div>
+
+  <div id="login-imagem"><br><br><br><br>
+    <img src="img/login.png">
+  </div>
+</div>
+
+</p>
+  <?php include "footer.php"; ?>
 </body>
 </html>

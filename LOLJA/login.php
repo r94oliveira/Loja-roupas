@@ -67,6 +67,7 @@ if (!$login && $_SERVER["REQUEST_METHOD"] == "POST") {
 <body>
 
   <?php include "header.php"?>
+
   <div id="container">
     <div id="login">
       <h1>Login:</h1><br>
@@ -85,15 +86,15 @@ if (!$login && $_SERVER["REQUEST_METHOD"] == "POST") {
       <form action="login.php" method="post">
 
       <div class="form-group">
-        <label for="email">Email: </label><br>
-        <input type="text" name="email"  class="form-control" value="<?php echo $email; ?>" required><br>
+        <label for="email">Email: </label>
+        <input type="text" name="email"  class="form-control" value="<?php echo $email; ?>" required>
       </div>
-
+<br>
       <div class="form-group">
-        <label for="password">Senha: </label><br>
-        <input type="password" name="password"  class="form-control" value="" required><br>
+        <label for="password">Senha: </label>
+        <input type="password" name="password"  class="form-control" value="" required>
       </div>
-
+<br>
         <input type="submit" class="btn btn-dark" name="submit" value="Entrar">
 
       </form>
@@ -102,7 +103,8 @@ if (!$login && $_SERVER["REQUEST_METHOD"] == "POST") {
         <li><a href="indexLogin.php">Voltar</a></li>
       </ul>
     </div>
-      <div id="login-imagem">
+
+  <div id="login-imagem">
         <img src="img/login.png">
       </div>
   </div>
