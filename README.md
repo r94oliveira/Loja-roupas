@@ -1,22 +1,11 @@
-# DS122 - Projeto
+# Loja online de roupas
+
+Trabalho da disciplina de Desenvolvimento Web I do curso de Tecnologia em Análise e Desenvolvimento de Sistemas da UFPR. O objetivo é o desenvolvimento inicial de um sistema de loja online de roupas usando HTML, CSS, JS, PHP e MySQL.
 
 **Integrantes do grupo:**
 - _Karine Antoniacomi dos Santos_
 - _Pietro Prá Giacomitti_
 - _Robson Mariano Euzébio de Oliveira_
 
-*************************
-
-**Link para o video explicando o trabalho final:**
-
-https://youtu.be/fMP6CJotpw4
-
-*************************
-
-Este é o repositório de que deverá armazenar o Projeto de DS122 do início ao final da disciplina.
-
-Trabalho a ser realizado em grupos de 3 a 5 estudantes.
-
-1. Apenas um membro do grupo deve fazer o fork deste repositório e armazená-lo em seu grupo do gitlab da disciplia;
-2. Adicione ao repositório os demais participantes do grupo no gitlab (como developer ou master);
-3. Altere o arquivo `README.md` a adicione informações sobre o grupo.
+![](login-loja.png)
+![](carrinho-loja.png)
