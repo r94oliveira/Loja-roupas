@@ -1,6 +1,6 @@
 # Loja online de roupas
 
-Trabalho da disciplina de Desenvolvimento Web I do curso de Tecnologia em Análise e Desenvolvimento de Sistemas da UFPR. O objetivo é o desenvolvimento inicial de um sistema de loja online de roupas usando HTML, CSS, JS, PHP e MySQL.
+Trabalho realizado em 2021 da disciplina de Desenvolvimento Web I do curso de Tecnologia em Análise e Desenvolvimento de Sistemas da UFPR. O objetivo é o desenvolvimento inicial de um sistema de loja online de roupas usando HTML, CSS, JS, PHP e MySQL.
 
 **Integrantes do grupo:**
 - _Karine Antoniacomi dos Santos_
